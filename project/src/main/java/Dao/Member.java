@@ -1,4 +1,4 @@
-package dto;
+package Dao;
 
 public class Member {
 	private String memberId;
