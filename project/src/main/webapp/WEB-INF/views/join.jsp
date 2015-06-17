@@ -28,7 +28,7 @@
 	<tr><td>주소<td>
 		<td><input type="text" required="required"></td></tr>
 	<tr><td><input type="submit" value="가입하기" onsubmit="chk()"></td>
-		<td><input type="button" value="취소" onclick=""></td></tr>
+		<td><a href="main.html"><input type="button" value="취소" onclick=""></a></td></tr>
 </table></form>
 </fieldset></td></tr></table>
 </body>

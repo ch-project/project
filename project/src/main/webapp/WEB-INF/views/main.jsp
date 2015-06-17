@@ -26,7 +26,8 @@
 
 <script type="text/javascript">
 	function select_local() {
-		document.selectbox_local.submit();
+		
+		document.frm_map.submit();
 	}
 	
 	function b1() {
@@ -54,59 +55,55 @@
 <body>
 
 
-<hr/>
 
-<div id="menu_space">
-<table border=1 ><tr>
-	<td><a href="">맛지</a></td>
-	<td><a href="">레시피</a></td>
-	<td><a href="">my 맛집</a></td>
-	<td><a href="">my 레시피</a></td>
-</tr></table>
-</div>
-
-<hr/>
 
 
 <table><tr><td>
+지역별 맛집 찾기<br>
 
-<%-- <c:choose> --%>
-<%-- <c:when test=""> --%>
-<img alt="지도" src="./img/map.jpg" id="map">
-<%-- 
-</c:when> 
-<c:when test="서울">
-</c:when>
-<c:when test="제주">
-</c:when>
+
+<c:choose> 
+	<c:when test="${empty map_picture_src}">
+		<img alt="전국지도" src="./img/map.jpg" id="map">
+	</c:when>
+	<c:when test="${not empty mappicture}">
+		<img alt="전국지도" src="${map_picture_src}" id="map">
+	</c:when>
 </c:choose> 
---%>
 
-<form action="select_local.html">
-<select name="selectbox_local" id="selectbox_local" onchange="select_local()">
-	<option>서울</option>
-	<option>경기</option>
-	<option>강원</option>
-	<option>충청</option> 
-	<option>전라</option>
-	<option>경상</option>
-	<option>제주</option>
+<form name="frm_map" action="select_local.html">
+
+<select name="selectbox_local" onchange="select_local()">
+	<option value="1">서울</option>
+	<option value="2">경기</option>
+	<option value="3">강원</option>
+	<option value="4">충청</option> 
+	<option value="5">전라</option>
+	<option value="6">경상</option>
+	<option value="7">제주</option>
 </select>
 </form>
 </td>
 
+
 <%-- 지역을 선택했을 때 나오는 부분 & BEST5에 대한 설명 부분 --%>
-<%-- 
-<c:choose> 
-<c:when test=""> 
---%>
 <td>
 
+<c:if test="${empty plaque}">
+	<c:set var="plague" value="0" />
+</c:if>
+<c:if test="${plague eq 1}">
+	<table>
+	
+	</table>
+</c:if>
+<c:if test="${plague eq 0}">
+	랄라라라랄라라라
+</c:if>
+
 </td>
-<%-- 
-</c:when>
-</c:choose> 
---%>
+
+
 
 <td>
 <div class="item2">

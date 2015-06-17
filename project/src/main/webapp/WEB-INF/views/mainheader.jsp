@@ -19,8 +19,17 @@
 	</td>
 
 	<td id="search_space" align="center">
-	<input type="text" size="40px" >
-	<input type="button" value="검색">
+	<select>
+		<option selected="selected">모두</option>
+		<option>식당명으로</option>
+		<option>요리명으로</option>
+		<option>작성자명으로</option>
+	</select>
+	<input type="text" size="25px" >
+	<input type="button" value="검색"><br>
+	<input type="radio" checked="checked">모두검색
+	<input type="radio">맛집검색
+	<input type="radio">레시피검색
 	</td>
 
 	<td id="login_space">
@@ -31,7 +40,7 @@
 			<td rowspan="2"><input type="submit" id="loginbtn" value="로그인"></td></tr>
 			<tr><td align="right"><input type="password"></td></tr>
 			<tr id="sign_and_find">
-				<td align="right"><a href="join.html">회원이 아니시면 가입하세요.</a></td>
+				<td align="right"><a href="join_page.html">회원이 아니시면 가입하세요.</a></td>
 				<td align="center"><a href="find.html">비밀번호 찾기</a></td>
 			</tr>
 		</table></form>
@@ -51,5 +60,18 @@
 	
 </tr></table>
 </div>
+
+<hr                                             />
+
+<div id="menu_space">
+<table border=1 ><tr>
+	<td><a href="">맛집</a></td>
+	<td><a href="">레시피</a></td>
+	<td><a href="">리뷰</a></td>
+	<td><a href="">나의 메뉴</a></td>
+</tr></table>
+</div>
+
+<hr                                            />
 </body>
 </html>

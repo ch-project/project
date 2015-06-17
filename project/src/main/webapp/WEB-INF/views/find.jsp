@@ -17,7 +17,7 @@
 	<tr><td>이메일</td>
 		<td><input type="text" required="required"></td></tr>
 	<tr><td><input type="submit" value="비밀번호 찾기"></td>
-		<td><input type="button" value="취소" onclick=""></td></tr>
+		<td><a href="main.html"><input type="button" value="취소"></a></td></tr>
 </table></form>
 </fieldset></td></tr></table>
 </body>
