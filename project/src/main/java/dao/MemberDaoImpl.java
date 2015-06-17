@@ -2,10 +2,10 @@ package dao;
 
 import org.springframework.stereotype.Repository;
 
-import dto.Member;
+import model.Member;
 
 @Repository
-public class MemberDaoImpl implements MemberDao{
+public abstract class MemberDaoImpl implements MemberDao{
 
 	public int createMember(Member member) {
 		

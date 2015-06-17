@@ -1,6 +1,6 @@
 package dao;
 
-import dto.Member;
+import model.Member;
 
 public interface MemberDao {
 	public int createMember(Member member);

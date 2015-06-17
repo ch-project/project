@@ -1,3 +1,4 @@
+
 create table member (
 	memberId varchar2(20) ,
 	memberPass varchar2(20),
@@ -16,3 +17,4 @@ create table mathome (
 
 insert into member values('id1','1111','이범준','leebj91@naver.com','임시주소');
 insert into mathome values('서울시','서울시','강남구','새마을식당') 
+

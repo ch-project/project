@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import dao.MemberDao;
-import dto.Member;
+import model.Member;
 
 @Service
 public class Service1 {

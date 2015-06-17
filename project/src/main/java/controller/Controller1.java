@@ -9,7 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import service.Service1;
-import dto.Member;
+import model.Member;
 
 
 @Controller
