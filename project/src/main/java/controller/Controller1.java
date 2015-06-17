@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class Controller1 {
 	
 	//로고 클릭시
-	@RequestMapping(value="index.html")
+	@RequestMapping(value="main.html")
 	public String index() {
-		return "index";
+		return "main";
 	}
 	
 	//메인화면에서 로그인 버튼 클릭

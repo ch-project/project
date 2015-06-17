@@ -24,8 +24,8 @@
 	</td>
 
 	<td id="login_space">
-	<c:choose>
-	<!-- <c:when test="${not empty loginUser}"> 로그인 했는지 않햇는지-->
+	<%-- <c:choose> --%>
+	<%-- <c:when test="${not empty loginUser}"> 로그인 했는지 않햇는지--%>
 		<form action="login.do" method="get"><table>
 		    <tr><td align="right"><input type="text"></td>
 			<td rowspan="2"><input type="submit" id="loginbtn" value="로그인"></td></tr>
@@ -35,8 +35,8 @@
 				<td align="center"><a href="find.html">비밀번호 찾기</a></td>
 			</tr>
 		</table></form>
-	<!-- </c:when> -->
-	<c:when test="${bbb}">
+	<%-- </c:when> --%>
+	<%-- <c:when test="${bbb}"
 		<form action="login.do" method="get"><table>
 		<tr><td>
 			<c:out value="${loginUser.mName}" />님, 환영합니다.
@@ -46,7 +46,7 @@
 		</td></tr>
 		</table></form>
 	</c:when>
-	</c:choose>
+	</c:choose> --%>
 	</td>
 	
 </tr></table>
