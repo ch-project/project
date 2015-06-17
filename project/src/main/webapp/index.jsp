@@ -1,8 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="./WEB-INF/views/header.jsp" %>
+<%@ include file="./WEB-INF/views/mainheader.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
+
 <style type="text/css">
 	div{ display: inline; }
 	
@@ -49,40 +52,16 @@
 </head>
 
 <body>
-<div id="header">
-<table><tr>
 
-	<td id="logo_space">
-	<img alt="로고" src="./img/nbh.jpg" id="logo">
-	<img alt="회사명" src="./img/nbh.jpg" id="companyname">
-	</td>
-
-	<td id="search_space" align="center">
-	<input type="text" size="40px" >
-	<input type="button" value="검색">
-	</td>
-
-	<td id="login_space">
-	<form action="join" method="get"><table>
-	    <tr><td align="right"><input type="text"></td>
-		<td rowspan="2"><input type="submit" id="loginbtn" value="로그인"></td></tr>
-		<tr><td align="right"><input type="password"></td></tr>
-		<tr id="sign_and_find">
-			<td align="right"><a href="">회원이 아니시면 가입하세요.</a></td>
-			<td align="center"><a href="">비밀번호 찾기</a></td>
-		</tr>
-	</table></form>
-	</td>
-	
-
-</tr></table>
-</div>
 
 <hr/>
 
 <div id="menu_space">
 <table border=1 ><tr>
-<td>메뉴1</td><td>메뉴2</td><td>메뉴3</td><td>메뉴4</td>
+	<td><a href="">홈으로</a></td>
+	<td><a href="">맛집</a></td>
+	<td><a href="">레시피</a></td>
+	<td><a href="">메뉴4</a></td>
 </tr></table>
 </div>
 
@@ -93,7 +72,7 @@
 
 <img alt="지도" src="./img/map.jpg" id="map">
 
-<form action="">
+<form action="select_local.html">
 <select name="selectbox_local" id="selectbox_local" onchange="select_local()">
 	<option>서울</option>
 	<option>경기</option>
@@ -105,6 +84,15 @@
 </select>
 </form>
 </td>
+
+<!-- 지역을 선택했을 때 나오는 부분 -->
+<c:choose>
+<c:when test="">
+<td>
+</td>
+</c:when>
+</c:choose>
+<!--  -->
 
 <td>
 <div class="item2">

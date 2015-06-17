@@ -5,7 +5,6 @@ TEAM_ID number NOT NULL,
 FOREIGN KEY(TEAM_ID) REFERENCES TEAM(TEAM_ID) 
 );
 
-DROP TABLE MEMBER CASCADE CONSTRAINTS;
-drop table player;
 
 insert into item values('id1','1111','이범준','leebj91@naver.com','임시주소');
+
