@@ -1,8 +1,9 @@
-CREATE TABLE PLAYER( 
-PLAYER_ID number(6) PRIMARY KEY,
-NAME VARCHAR2(30) NOT NULL,
-TEAM_ID number NOT NULL,
-FOREIGN KEY(TEAM_ID) REFERENCES TEAM(TEAM_ID) 
+CREATE TABLE member( 
+member_Id varchar2(20) primary key,
+member_Pass varchar2(20),
+member_Name varchar2(10),
+member_Email varchar2(20),
+member_Address varchar2(20)
 );
 
 

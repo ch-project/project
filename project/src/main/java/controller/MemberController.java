@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class Controller1 {
+public class MemberController {
 
 	// 로고 클릭시
 	@RequestMapping(value = "index.html")
