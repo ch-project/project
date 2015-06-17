@@ -95,12 +95,15 @@
 </form>
 </td>
 
-<%-- 지역을 선택했을 때 나오는 부분 --%>
+<%-- 지역을 선택했을 때 나오는 부분 & BEST5에 대한 설명 부분 --%>
 <%-- 
 <c:choose> 
-<c:when test="">
+<c:when test=""> 
+--%>
 <td>
+
 </td>
+<%-- 
 </c:when>
 </c:choose> 
 --%>
@@ -109,6 +112,7 @@
 <div class="item2">
 추천Best5<br>
 <a href="#"><img alt="큰이미지" src="" height="" width="" id="big"></a><br>
+식당이름 글자크기 크게<br>
 <img alt="베스트1" src="./img/best1.jpg" onclick="b1()">
 <img alt="베스트2" src="./img/best2.jpg" onclick="b2()">
 <img alt="베스트3" src="./img/best3.jpg" onclick="b3()">
