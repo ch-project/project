@@ -1,10 +1,11 @@
-create table member (
-	memberId varchar2(20) ,
-	memberPass varchar2(20),
-	memberName varchar2(20),
-	memberEmail varchar2(40),
-	memberAddress varchar2(60),
-
+CREATE TABLE PLAYER( 
+PLAYER_ID number(6) PRIMARY KEY,
+NAME VARCHAR2(30) NOT NULL,
+TEAM_ID number NOT NULL,
+FOREIGN KEY(TEAM_ID) REFERENCES TEAM(TEAM_ID) 
 );
+
+DROP TABLE MEMBER CASCADE CONSTRAINTS;
+drop table player;
 
 insert into item values('id1','1111','이범준','leebj91@naver.com','임시주소');
