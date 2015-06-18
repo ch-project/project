@@ -1,3 +1,5 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
 
-<%response.sendRedirect("main.html"); %>
+<%
+	response.sendRedirect("main.html");
+%>

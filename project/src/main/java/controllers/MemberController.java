@@ -18,39 +18,39 @@ public class MemberController {
 	private Service1 service1;
 	
 	//로고 클릭시
-	@RequestMapping(value="main.html")
+	@RequestMapping(value="main")
 	public String index() {
 		System.out.print(1);
 		return "main";
 	}
 	
 	//메인화면에서 로그인 버튼 클릭
-	@RequestMapping(value="login.html")
+	@RequestMapping(value="login")
 	public String login() {
 		return "aaa";
 	}
 	
 	//메인화면에서 가입하기 버튼 클릭
-	@RequestMapping(value="join_page.html")
+	@RequestMapping(value="join_page")
 	public String join_page() {
 		return "join";
 	}
 
 	//가입 폼에서 가입하기 버튼 클릭
-	@RequestMapping(value="join_result.html")
+	@RequestMapping(value="join_result")
 	public String join_result(Member meber) {
 		//service1.createmember(member);
 		return "join_success";
 	}
 	
 	// 메인화면에서 비밀번호 찾기 버튼 클릭
-	@RequestMapping(value="find.html")
+	@RequestMapping(value="find")
 	public String find_page() {
 		return "find";
 	}
 	
 	//아이디 이름 이메일 입력후 비밀번호 찾기 버튼 클릭
-	@RequestMapping(value="find_result.html")
+	@RequestMapping(value="find_result")
 	public String find_result() {
 		int i=1;
 		if(i==1) {
@@ -63,7 +63,7 @@ public class MemberController {
 	}
 	
 	//지도에서 어느한 지역을 선택했을 때
-	@RequestMapping(value="select_local.html")
+	@RequestMapping(value="select_local")
 	public String select_local(Model model, HttpServletRequest request) {
 		int plague = 1;
 		int locCode = Integer.parseInt(request.getParameter("selectbox_local"));
