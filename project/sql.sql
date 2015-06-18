@@ -1,3 +1,4 @@
+create database prodb;
 
 create table member (
 	memberId varchar2(20) ,
