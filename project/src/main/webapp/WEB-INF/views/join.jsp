@@ -5,11 +5,7 @@
 <head>
 <script type="text/javascript">
 	function chk() {
-		if(!password.equals(password2)) {
-			alert("안같아");
-			return false;
-		}
-		return true;
+			alert("비밀번호가 같지 않습니다.");
 	}
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -18,7 +14,7 @@
 <body>
 <table><tr><td><fieldset>
 	<legend>회원가입 페이지</legend>
-<form action="" method="get"><table>
+<form action="main.html" method="post"><table>
 	<tr><td>아이디</td>
 		<td><input type="text" required="required"><input type="button" value="ID중복체크" ></td></tr>
 	<tr><td>패스워드</td>
@@ -29,10 +25,10 @@
 		<td><input type="text" required="required"></td></tr>
 	<tr><td>이메일</td>
 		<td><input type="text" required="required"></td></tr>
-	<tr><td>주소<td>
+	<tr><td>주소</td>
 		<td><input type="text" required="required"></td></tr>
-	<tr><td><input type="button" value="가입하기" onsubmit="chk()"></td>
-		<td><a href="main.html"><input type="button" value="취소" onclick=""></a></td></tr>
+	<tr><td><input type="submit" value="가입하기" onsubmit="chk()"></td>
+		<td><a href="main.html"><input type="button" value="취소"></a></td></tr>
 </table></form>
 </fieldset></td></tr></table>
 </body>
