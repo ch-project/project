@@ -5,13 +5,16 @@
 <head>
 <script type="text/javascript">
 	function chk() {
-			alert("비밀번호가 같지 않습니다.");
+
+		alert("비밀번호가 같지 않습니다.");
+
 	}
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
+
 <table><tr><td><fieldset>
 	<legend>회원가입 페이지</legend>
 <form action="main.html" method="get" id="fff" name="fff"><table>
@@ -31,5 +34,6 @@
 		<td><a href="main.html"><input type="button" value="취소"></a></td></tr>
 </table></form>
 </fieldset></td></tr></table>
+
 </body>
 </html>
