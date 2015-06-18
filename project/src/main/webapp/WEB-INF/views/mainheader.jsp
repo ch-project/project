@@ -65,10 +65,10 @@
 
 <div id="menu_space">
 <table border=1 ><tr>
-	<td><a href="">맛집</a></td>
-	<td><a href="">레시피</a></td>
-	<td><a href="">리뷰</a></td>
-	<td><a href="">나의 메뉴</a></td>
+	<td><a href="">맛집 목록</a></td>
+	<td><a href="">레시피 목록</a></td>
+	<td><a href="">맛집 리뷰</a></td>
+	<td><a href="">레시피 공유</a></td>
 </tr></table>
 </div>
 
