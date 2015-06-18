@@ -5,6 +5,7 @@ public class MatHome {
 	private String si;
 	private String gu;
 	private String matname;
+	private String description;
 	
 	public String getDoh() {
 		return doh;
@@ -29,6 +30,12 @@ public class MatHome {
 	}
 	public void setMatname(String matname) {
 		this.matname = matname;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	

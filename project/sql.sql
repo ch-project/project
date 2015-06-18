@@ -13,7 +13,7 @@ create table mathome (
 	si varchar2(20),
 	gu varchar2(20),
 	matname varchar2(40),
-	description varchar2(4000)
+	description varchar2(2000)
 );
 
 

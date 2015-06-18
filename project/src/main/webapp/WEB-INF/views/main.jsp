@@ -26,7 +26,6 @@
 
 <script type="text/javascript">
 	function select_local() {
-		
 		document.frm_map.submit();
 	}
 	

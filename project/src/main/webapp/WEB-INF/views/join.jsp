@@ -14,7 +14,7 @@
 <body>
 <table><tr><td><fieldset>
 	<legend>회원가입 페이지</legend>
-<form action="main.html" method="post"><table>
+<form action="main.html" method="get" id="fff" name="fff"><table>
 	<tr><td>아이디</td>
 		<td><input type="text" required="required"><input type="button" value="ID중복체크" ></td></tr>
 	<tr><td>패스워드</td>
