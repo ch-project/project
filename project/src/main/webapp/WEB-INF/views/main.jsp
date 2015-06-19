@@ -59,13 +59,11 @@
 
 <table><tr><td>
 지역별 맛집 찾기<br>
-
-
 <c:choose> 
 	<c:when test="${empty map_picture_src}">
 		<img alt="전국지도" src="./img/map.jpg" id="map">
 	</c:when>
-	<c:when test="${not empty mappicture}">
+	<c:when test="${not empty map_picture_src}">
 		<img alt="전국지도" src="${map_picture_src}" id="map">
 	</c:when>
 </c:choose> 
@@ -92,12 +90,10 @@
 	<c:set var="plague" value="0" />
 </c:if>
 <c:if test="${plague eq 1}">
-	<table>
 	
-	</table>
 </c:if>
 <c:if test="${plague eq 0}">
-	랄라라라랄라라라
+	나나나나나나
 </c:if>
 
 </td>
@@ -122,8 +118,6 @@
 <div id="foot_space">
 <address>주소 : 서울시 서초구 서초동 1234 <br/> TEL: 02-1111-1111</address>
 </div>
-
-2.3
 
 
 </body>

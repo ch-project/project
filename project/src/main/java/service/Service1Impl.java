@@ -10,4 +10,7 @@ public class Service1Impl implements Service1{
 	@Autowired
 	private MemberDao memberdao;
 	
+	public String getId(String id) {
+		return this.memberdao.getId(id);
+	}
 }

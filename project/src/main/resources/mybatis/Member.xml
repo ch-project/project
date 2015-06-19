@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Member">
+	<resultMap  type="member" 		id="ResultMap">
+		<result property="mId" 	  	column="mId"/>
+		<result property="password"	column="password"/>
+		<result property="mName"   	column="mName"/>
+		<result property="address" 	column="address" />
+		<result property="email"	column="email"/>
+	</resultMap>		
+	
+	<select id="selectmId" resultType="String">		
+		<![CDATA[ SELECT MID FROM MEMBER WHERE MID=#{mId}]]>
+	</select>
+	
+</mapper>

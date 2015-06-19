@@ -33,29 +33,30 @@
 	</td>
 
 	<td id="login_space">
-	<%-- <c:choose> --%>
-	<%-- <c:when test="${not empty loginUser}"> 로그인 했는지 않햇는지--%>
-		<form action="login.do" method="get"><table>
-		    <tr><td align="right"><input type="text"></td>
+
+	<% 
+		if(session.getAttribute("id")==null) {
+	%>
+		<form action="login.html" method="get"><table>
+		    <tr><td align="right"><input type="text" name="id"></td>
 			<td rowspan="2"><input type="submit" id="loginbtn" value="로그인"></td></tr>
-			<tr><td align="right"><input type="password"></td></tr>
+			<tr><td align="right"><input type="password" name="password"></td></tr>
 			<tr id="sign_and_find">
 				<td align="right"><a href="join_page.html">회원이 아니시면 가입하세요.</a></td>
 				<td align="center"><a href="find.html">비밀번호 찾기</a></td>
 			</tr>
 		</table></form>
-	<%-- </c:when> --%>
-	<%-- <c:when test="${bbb}"
-		<form action="login.do" method="get"><table>
+	<% } else { %>
+		<form><table>
 		<tr><td>
-			<c:out value="${loginUser.mName}" />님, 환영합니다.
+			<%=session.getAttribute("id")%>님, 환영합니다.
 			마이페이지 or 관리자 페이지
 			비밀번호 수정
 			내 ~~~
 		</td></tr>
-		</table></form>
-	</c:when>
-	</c:choose> --%>
+		</table></form> 
+	<% } %>
+	
 	</td>
 	
 </tr></table>

@@ -1,6 +1,7 @@
 package controllers;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import model.Member;
 
@@ -19,16 +20,20 @@ public class MemberController {
 	
 
 	//로고 클릭시.. 등등 메인으로
-	@RequestMapping(value="main.html")
+	@RequestMapping(value="main")
 	public String index() {
-		System.out.print(1);
 		return "main";
 	}
 	
 	//메인화면에서 로그인 버튼 클릭
 	@RequestMapping(value="login")
-	public String login() {
-		return "aaa";
+	public String login(Model model, HttpServletRequest request) {
+		String id = request.getParameter("id");
+		String password  = request.getParameter("password");
+		HttpSession session = request.getSession();
+		session.setAttribute("id",id);
+		session.setAttribute("password",password);
+		return "main";
 	}
 	
 	//메인화면에서 가입하기 버튼 클릭
@@ -36,9 +41,23 @@ public class MemberController {
 	public String join_page() {
 		return "join";
 	}
+	
+	//회원강비 폼에서 아이디중복체크 버튼 클릭
+	@RequestMapping(value="{id_chk}")
+	public String id_chk(HttpServletRequest request,Model model) {
+		String id = request.getParameter("id");
+		String idcheck_result = service1.getId(id);
+		if(idcheck_result==null) {
+			model.addAttribute("id", id);
+			model.addAttribute("message", id+"는 사용가능한 아이디입니다.");
+		} else {
+			model.addAttribute("message", id+"는 이미 있는 아이디입니다.");
+		}
+		return "join_page";
+	}
 
-	//가입 폼에서 가입하기 버튼 클릭
-	@RequestMapping(value="join_result")
+	//회원가입 폼에서 가입하기 버튼 클릭
+	@RequestMapping(value="join_query")
 	public String join_result(Member meber) {
 		
 		return "join_success";
@@ -78,7 +97,8 @@ public class MemberController {
 		case 6: map_picture_src = "./img/ks.jpg"; break;
 		case 7: map_picture_src = "./img/jj.jpg"; break;
 		}
-		
+		//object[] a = service1.minibylocCode(locCode);
+		//model.addAtrribute("a",a);
 		model.addAttribute("map_picture_src", map_picture_src);
 		model.addAttribute("plague", plague);
 		return "main";

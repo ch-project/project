@@ -18,6 +18,7 @@
 		<property name="mappings"> 
 			<value> 			  
 			   /join.html=MemberController
+			   /login.html=MemberController
 			   /find.html=MemberController
 			   /main.html=MemberController
 			   /join_result.html=MemberController		
